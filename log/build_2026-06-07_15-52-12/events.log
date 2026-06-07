@@ -1024,3 +1024,144 @@
 [17.548456] (-) TimerEvent: {}
 [17.648724] (-) TimerEvent: {}
 [17.749145] (-) TimerEvent: {}
+[17.849526] (-) TimerEvent: {}
+[17.949862] (-) TimerEvent: {}
+[18.050144] (-) TimerEvent: {}
+[18.150412] (-) TimerEvent: {}
+[18.250693] (-) TimerEvent: {}
+[18.350962] (-) TimerEvent: {}
+[18.451342] (-) TimerEvent: {}
+[18.485173] (rover_gazebo) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable ground_truth_remapper_node\x1b[0m\n'}
+[18.551441] (-) TimerEvent: {}
+[18.651724] (-) TimerEvent: {}
+[18.752036] (-) TimerEvent: {}
+[18.772871] (rover_gazebo) StdoutLine: {'line': b'[ 66%] Built target ground_truth_remapper_node\n'}
+[18.849142] (rover_gazebo) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable motors_command_parser_node\x1b[0m\n'}
+[18.852165] (-) TimerEvent: {}
+[18.952493] (-) TimerEvent: {}
+[19.052773] (-) TimerEvent: {}
+[19.086817] (rover_gazebo) StdoutLine: {'line': b'[ 83%] Built target motors_command_parser_node\n'}
+[19.152928] (-) TimerEvent: {}
+[19.253229] (-) TimerEvent: {}
+[19.293014] (rover_gazebo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable odometry_node\x1b[0m\n'}
+[19.353451] (-) TimerEvent: {}
+[19.453856] (-) TimerEvent: {}
+[19.554182] (-) TimerEvent: {}
+[19.587608] (rover_gazebo) StdoutLine: {'line': b'[100%] Built target odometry_node\n'}
+[19.596716] (rover_gazebo) CommandEnded: {'returncode': 0}
+[19.597244] (rover_gazebo) JobProgress: {'identifier': 'rover_gazebo', 'progress': 'install'}
+[19.597734] (rover_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sachin/ros2_rover/build/rover_gazebo'], 'cwd': '/home/sachin/ros2_rover/build/rover_gazebo', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sachin/ros2_rover/install/rover_msgs/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2670', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2634,unix/SK:/tmp/.ICE-unix/2634', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4d0a98b4_a6ab_47a4_a580_4e51949235b6', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/ros2_rover/install/rover_motor_controller_cpp:/home/sachin/ros2_rover/install/rover_msgs:/home/sachin/ros2_rover/install/rover_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_rover/build/rover_gazebo', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/ros2_rover/install/rover_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/ros2_rover/install/rover_motor_controller_cpp:/home/sachin/ros2_rover/install/rover_msgs:/home/sachin/ros2_rover/install/rover_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[19.604739] (rover_gazebo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.604912] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/motors_command_parser_node\n'}
+[19.607263] (rover_gazebo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/motors_command_parser_node" to ""\n'}
+[19.607352] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/odometry_node\n'}
+[19.609600] (rover_gazebo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/odometry_node" to ""\n'}
+[19.609688] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/ground_truth_remapper_node\n'}
+[19.611537] (rover_gazebo) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sachin/ros2_rover/install/rover_gazebo/lib/rover_gazebo/ground_truth_remapper_node" to ""\n'}
+[19.611631] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch\n'}
+[19.611717] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/mars.launch.py\n'}
+[19.611810] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/low_moon.launch.py\n'}
+[19.611933] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/gazebo.launch.py\n'}
+[19.612000] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/curiosity.launch.py\n'}
+[19.612061] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/moon.launch.py\n'}
+[19.612116] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/forest.launch.py\n'}
+[19.612160] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/include\n'}
+[19.612196] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/include/cmd_vel.launch.py\n'}
+[19.612231] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/launch/include/spawn.launch.py\n'}
+[19.612265] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds\n'}
+[19.612298] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/curiosity.world\n'}
+[19.612334] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/forest.world\n'}
+[19.612366] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/moon.world\n'}
+[19.612398] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/empty.world\n'}
+[19.612429] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/low_moon.world\n'}
+[19.612460] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/worlds/mars.world\n'}
+[19.612491] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models\n'}
+[19.612521] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path\n'}
+[19.612565] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/model.sdf\n'}
+[19.612613] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes\n'}
+[19.612645] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/mars_texture_lq.jpg\n'}
+[19.612677] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/curiosity_path25k.dae\n'}
+[19.615473] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/meshes/curiosity_path25k.stl\n'}
+[19.616532] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/curiosity_path/model.config\n'}
+[19.616573] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon\n'}
+[19.616611] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/model.sdf\n'}
+[19.616658] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials\n'}
+[19.616692] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures\n'}
+[19.616738] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground.jpg\n'}
+[19.616775] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground_1.jpg\n'}
+[19.616816] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/textures/ground_normal.jpg\n'}
+[19.617490] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/heightmap\n'}
+[19.617533] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/heightmap/moon.png\n'}
+[19.617572] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/materials/heightmap/moon.xcf\n'}
+[19.617610] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/moon/model.config\n'}
+[19.617651] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9\n'}
+[19.617698] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/model.sdf\n'}
+[19.617734] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes\n'}
+[19.617776] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/rock9.dae\n'}
+[19.619098] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/rock9.stl\n'}
+[19.619550] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/meshes/texture.jpg\n'}
+[19.619632] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rock9/model.config\n'}
+[19.619676] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation\n'}
+[19.619720] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation/model.sdf\n'}
+[19.619769] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation/meshes\n'}
+[19.619800] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation/meshes/rockformation.dae\n'}
+[19.620951] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation/meshes/SMALL_RED_BaseColor.png\n'}
+[19.621072] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/rockformation/model.config\n'}
+[19.621116] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock\n'}
+[19.621164] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/model.sdf\n'}
+[19.621199] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes\n'}
+[19.621240] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/jaggedrock_texture.dae\n'}
+[19.621905] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/bumpy.jpg\n'}
+[19.621954] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/meshes/basecolor.jpg\n'}
+[19.622001] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/jaggedrock/model.config\n'}
+[19.622042] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/low_moon\n'}
+[19.622076] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/low_moon/model.sdf\n'}
+[19.622124] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/low_moon/model.config\n'}
+[19.622160] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain\n'}
+[19.622194] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/model.sdf\n'}
+[19.622242] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes\n'}
+[19.622275] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/mars_texture_lq.jpg\n'}
+[19.622305] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain.stl\n'}
+[19.622350] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/reddish-sand.jpg\n'}
+[19.622425] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain.dae\n'}
+[19.622568] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/mars_texture.jpg\n'}
+[19.623107] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/meshes/terrain_textured.dae\n'}
+[19.623274] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/mars_terrain/model.config\n'}
+[19.623320] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain\n'}
+[19.623363] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/model.sdf\n'}
+[19.623409] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/materials\n'}
+[19.623445] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/materials/textures\n'}
+[19.623492] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/materials/textures/terrain.png\n'}
+[19.623528] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/materials/textures/terrain.xcf\n'}
+[19.623572] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/terrain/model.config\n'}
+[19.623606] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater\n'}
+[19.623639] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater/model.sdf\n'}
+[19.623685] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater/meshes\n'}
+[19.623716] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater/meshes/crater4k.stl\n'}
+[19.623818] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater/meshes/crater_martian_red.dae\n'}
+[19.624109] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/models/crater/model.config\n'}
+[19.624162] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/rviz\n'}
+[19.624195] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/rviz/default.rviz\n'}
+[19.624241] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/config\n'}
+[19.624276] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/config/odometry.yaml\n'}
+[19.624323] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/config/gz_bridge.yaml\n'}
+[19.624363] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/gz_sim_resource_path.sh\n'}
+[19.624405] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/gz_sim_resource_path.dsv\n'}
+[19.624469] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/ament_index/resource_index/package_run_dependencies/rover_gazebo\n'}
+[19.624528] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/ament_index/resource_index/parent_prefix_path/rover_gazebo\n'}
+[19.624575] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/ament_prefix_path.sh\n'}
+[19.624619] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/ament_prefix_path.dsv\n'}
+[19.624660] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/path.sh\n'}
+[19.624704] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/environment/path.dsv\n'}
+[19.624747] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/local_setup.bash\n'}
+[19.624788] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/local_setup.sh\n'}
+[19.624832] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/local_setup.zsh\n'}
+[19.624874] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/local_setup.dsv\n'}
+[19.624916] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/package.dsv\n'}
+[19.624972] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/ament_index/resource_index/packages/rover_gazebo\n'}
+[19.625028] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/cmake/rover_gazeboConfig.cmake\n'}
+[19.625068] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/cmake/rover_gazeboConfig-version.cmake\n'}
+[19.625109] (rover_gazebo) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_rover/install/rover_gazebo/share/rover_gazebo/package.xml\n'}
+[19.626482] (rover_gazebo) CommandEnded: {'returncode': 0}
+[19.635841] (rover_gazebo) JobEnded: {'identifier': 'rover_gazebo', 'rc': 0}
+[19.639533] (-) EventReactorShutdown: {}

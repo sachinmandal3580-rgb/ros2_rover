@@ -5,18 +5,19 @@ ekf_filter_node:
 
     frequency: 30.0
     sensor_timeout: 0.1
-    use_sim_time: true  # CHANGED: You're using Gazebo
+    use_sim_time: true
 
-    two_d_mode: true  # CRITICAL FIX: Enable 2D mode
+    two_d_mode: true
 
+    # Tight timing offsets to maintain synchronization with Gazebo physics
     transform_time_offset: 0.0
-    transform_timeout: 0.0
+    transform_timeout: 0.05            # Slightly increased from 0.0 to prevent tf cache drops
 
     print_diagnostics: true
     debug: false
 
     permit_corrected_publication: false
-    publish_acceleration: true
+    publish_acceleration: false        # Turned off unless explicitly required by control nodes
     publish_tf: true
 
     map_frame: map
@@ -24,68 +25,29 @@ ekf_filter_node:
     base_link_frame: base_link
     world_frame: odom
 
-    # CHANGED: Use wheel odometry instead of RGBD odometry
-    odom0: wheel_odom
+    odom0: /odom_rgbd
     odom0_config: [
-        # position - only X and Y, no Z
-        true,   # x
-        true,   # y
-        false,  # z - DISABLED for 2D
-
-        # orientation - only yaw, no roll/pitch
-        false,  # roll - DISABLED for 2D
-        false,  # pitch - DISABLED for 2D
-        true,   # yaw
-
-        # linear velocity - only X and Y
-        true,   # vx
-        true,   # vy
-        false,  # vz - DISABLED for 2D
-
-        # angular velocity - only yaw rate
-        false,  # vroll - DISABLED for 2D
-        false,  # vpitch - DISABLED for 2D
-        true,   # vyaw
-
-        # linear acceleration - all disabled
-        false,  # ax
-        false,  # ay
-        false,  # az
+        false, false, false,
+        false, false, false,
+        true,  false, false,   # vx only
+        false, false, false,
+        false, false, false
       ]
     odom0_differential: false
     odom0_relative: false
 
-    # IMU configuration for 2D navigation
-    imu0: imu
+    # IMU gives heading + angular rates
+    imu0: /imu/data
     imu0_config: [
-        # position - all disabled
-        false,  # x
-        false,  # y
-        false,  # z
-
-        # orientation - only yaw (compass heading)
-        false,  # roll - DISABLED for 2D
-        false,  # pitch - DISABLED for 2D
-        true,   # yaw - helps with orientation drift
-
-        # linear velocity - all disabled (IMU doesn't provide this reliably)
-        false,  # vx
-        false,  # vy
-        false,  # vz
-
-        # angular velocity - only yaw rate
-        false,  # vroll - DISABLED for 2D
-        false,  # vpitch - DISABLED for 2D
-        true,   # vyaw - helps track turning
-
-        # linear acceleration - all disabled
-        false,  # ax
-        false,  # ay
-        false,  # az
+        false, false, false,
+        false, false, true,    # yaw
+        false, false, false,
+        true,  true,  true,    # angular velocities
+        false, false, false    # NO acceleration fusion
       ]
     imu0_differential: false
-    imu0_relative: true
-    imu0_remove_gravitational_acceleration: true  # CHANGED: Remove gravity
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: false  # not needed, ax/ay disabled # <-- CRITICAL: Keeps the IMU from introducing false forward acceleration when the rover pitches on rough terrain
 
     process_noise_covariance:
       [

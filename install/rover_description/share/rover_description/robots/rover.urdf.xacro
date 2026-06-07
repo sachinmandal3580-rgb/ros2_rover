@@ -37,12 +37,11 @@
     <xacro:include filename="$(find rover_description)/urdf/wheels/corner.urdf.xacro" />
     <xacro:include filename="$(find rover_description)/urdf/sensors/all_sensors.urdf.xacro" />
 
-    <gazebo>
+        <gazebo>
         <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
             <parameters>$(find rover_description)/config/control.yaml</parameters>
             <ros>
-                <remapping>/tf:=tf</remapping>
-                <remapping>/tf_static:=tf_static</remapping>
+                <namespace>/</namespace>
             </ros>
         </plugin>
 

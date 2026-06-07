@@ -59,6 +59,7 @@ def generate_launch_description():
                         "dev": joy_dev,
                         "deadzone": 0.3,
                         "autorepeat_rate": 0.0,
+                        "use_sim_time": True,
                     }
                 ],
             ),
@@ -66,7 +67,7 @@ def generate_launch_description():
                 package="teleop_twist_joy",
                 executable="teleop_node",
                 name="teleop_twist_joy_node",
-                parameters=[config_filepath],
+                parameters=[config_filepath, {"use_sim_time": True}],    
             ),
         ]
     )
