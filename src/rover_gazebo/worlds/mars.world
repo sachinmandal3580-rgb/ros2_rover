@@ -9,7 +9,9 @@
       <shadows>true</shadows>
     </scene>
     <physics type="ode">
-      <max_step_size>0.001</max_step_size>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
       <gravity>0 0 -3.711</gravity>
     </physics>
     <light name="sun_directional" type="directional">
