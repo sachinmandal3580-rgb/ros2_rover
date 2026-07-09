@@ -319,7 +319,6 @@ Show:
 - Gazebo simulation
 - Manual rover teleoperation
 - Steering and motor control
-- Wheel odometry generation
 - EKF localization
 - Autonomous navigation using Nav2
 - Goal reaching inside the Martian environment
@@ -328,7 +327,6 @@ Show:
 
 Briefly describe:
 - Steering kinematics implementation
-- Wheel odometry estimation
 - EKF sensor fusion configuration
 - Navigation parameter tuning
 - Challenges encountered
