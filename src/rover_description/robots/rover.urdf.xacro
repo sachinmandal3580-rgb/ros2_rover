@@ -1,203 +1,305 @@
-<ros2_control name="IgnitionSystem" type="system">
-    <hardware>
-        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
-    </hardware>
+<robot name="rover"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <!-- ================= Steering Joints ================= -->
+    <!-- Include macros -->
+    <xacro:include filename="$(find rover_description)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find rover_description)/urdf/inertials.xacro"/>
+    <xacro:include filename="$(find rover_description)/urdf/bases/body.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/bases/differential.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/bases/turnbuckle.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/bases/rocker.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/bases/bogie.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/wheels/wheel.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/wheels/corner.urdf.xacro" />
+    <xacro:include filename="$(find rover_description)/urdf/sensors/all_sensors.urdf.xacro" />
 
-    <joint name="front_right_corner_joint">
-        <command_interface name="position">
+        <gazebo>
+        <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+            <parameters>$(find rover_description)/config/control.yaml</parameters>
+            <ros>
+                <namespace>/</namespace>
+            </ros>
+        </plugin>
 
-            <!-- ==========================================================
-                TODO 1 — Configure Steering Angle Limits
+        <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
+            <render_engine>ogre2</render_engine>
+        </plugin>
 
-                Parameters:
-                  min
-                  max
+        <plugin filename="libignition-gazebo-imu-system.so" name="ignition::gazebo::systems::Imu">
+        </plugin>
+    </gazebo>
 
-                Controls:
-                  Defines the minimum and maximum steering angle that
-                  can be commanded to each steering joint.
+    <ros2_control name="IgnitionSystem" type="system">
+        <hardware>
+            <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+        </hardware>
 
-                Why is this important?
-                  These limits determine how far the front and rear
-                  steering wheels are allowed to rotate. Any steering
-                  command outside this range will be clipped by the
-                  controller.
+        <!-- ================= Steering Joints ================= -->
 
-                Effects:
-                • Larger limits:
-                    - Enables tighter turns.
-                    - May produce unrealistic steering if set too high.
+        <joint name="front_right_corner_joint">
+            <command_interface name="position">
 
-                • Smaller limits:
-                    - Produces smoother steering.
-                    - Increases the rover's turning radius.
+                <!-- ==========================================================
+                    TODO 1 — Configure Steering Angle Limits
 
-                Hint:
-                - Use values in radians.
-                - The limits should be symmetric (±θ).
-                - Most mobile robots use steering limits between
-                  ±0.5 and ±1.2 radians.
-            ========================================================== -->
+                    Parameters:
+                    min
+                    max
 
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
+                    Controls:
+                    Defines the minimum and maximum steering angle that
+                    can be commanded to each steering joint.
 
-        </command_interface>
+                    Why is this important?
+                    These limits determine how far the front and rear
+                    steering wheels are allowed to rotate. Any steering
+                    command outside this range will be clipped by the
+                    controller.
 
-        <state_interface name="position">
-            <param name="initial_value">0.0</param>
-        </state_interface>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                    Effects:
+                    • Larger limits:
+                        - Enables tighter turns.
+                        - May produce unrealistic steering if set too high.
 
-    <!--
-      NOTE:
-      Apply the same steering limits to the remaining steering joints
-      to maintain symmetric steering behaviour.
-    -->
+                    • Smaller limits:
+                        - Produces smoother steering.
+                        - Increases the rover's turning radius.
 
-    <joint name="front_left_corner_joint">
-        <command_interface name="position">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position">
-            <param name="initial_value">0.0</param>
-        </state_interface>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                    Hint:
+                    - Use values in radians.
+                    - The limits should be symmetric (±θ).
+                    - Most mobile robots use steering limits between
+                    ±0.5 and ±1.2 radians.
+                ========================================================== -->
 
-    <joint name="back_right_corner_joint">
-        <command_interface name="position">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position">
-            <param name="initial_value">0.0</param>
-        </state_interface>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
 
-    <joint name="back_left_corner_joint">
-        <command_interface name="position">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position">
-            <param name="initial_value">0.0</param>
-        </state_interface>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+            </command_interface>
 
-    <!-- ================= Drive Wheels ================= -->
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
 
-    <joint name="front_right_wheel_joint">
-        <command_interface name="velocity">
+        <!--
+        NOTE:
+        Apply the same steering limits to the remaining steering joints
+        to maintain symmetric steering behaviour.
+        -->
 
-            <!-- ==========================================================
-                TODO 2 — Configure Maximum Wheel Speed
+        <joint name="front_left_corner_joint">
+            <command_interface name="position">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
 
-                Parameters:
-                  min
-                  max
+        <joint name="back_right_corner_joint">
+            <command_interface name="position">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
 
-                Controls:
-                  Defines the minimum and maximum rotational velocity
-                  that can be commanded to each drive wheel.
+        <joint name="back_left_corner_joint">
+            <command_interface name="position">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
 
-                Why is this important?
-                  These limits determine the rover's maximum driving
-                  speed. Any velocity command beyond these limits will
-                  automatically be clipped by the controller.
+        <!-- ================= Drive Wheels ================= -->
 
-                Effects:
-                • Larger limits:
-                    - Higher maximum speed.
-                    - Faster mission completion.
-                    - Reduced stability if excessively large.
+        <joint name="front_right_wheel_joint">
+            <command_interface name="velocity">
 
-                • Smaller limits:
-                    - Slower and smoother motion.
-                    - Easier control.
-                    - Longer travel time.
+                <!-- ==========================================================
+                    TODO 2 — Configure Maximum Wheel Speed
 
-                Hint:
-                - Use equal positive and negative limits so the rover
-                  can move both forward and backward.
-                - Units are radians per second (rad/s).
-                - Choose values that balance speed and stability.
-            ========================================================== -->
+                    Parameters:
+                    min
+                    max
 
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
+                    Controls:
+                    Defines the minimum and maximum rotational velocity
+                    that can be commanded to each drive wheel.
 
-        </command_interface>
+                    Why is this important?
+                    These limits determine the rover's maximum driving
+                    speed. Any velocity command beyond these limits will
+                    automatically be clipped by the controller.
 
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                    Effects:
+                    • Larger limits:
+                        - Higher maximum speed.
+                        - Faster mission completion.
+                        - Reduced stability if excessively large.
 
-    <!--
-      NOTE:
-      Apply the same velocity limits to all remaining drive wheels
-      so every wheel shares the same maximum speed.
-    -->
+                    • Smaller limits:
+                        - Slower and smoother motion.
+                        - Easier control.
+                        - Longer travel time.
 
-    <joint name="front_left_wheel_joint">
-        <command_interface name="velocity">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                    Hint:
+                    - Use equal positive and negative limits so the rover
+                    can move both forward and backward.
+                    - Units are radians per second (rad/s).
+                    - Choose values that balance speed and stability.
+                ========================================================== -->
 
-    <joint name="mid_right_wheel_joint">
-        <command_interface name="velocity">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
 
-    <joint name="mid_left_wheel_joint">
-        <command_interface name="velocity">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+            </command_interface>
 
-    <joint name="back_right_wheel_joint">
-        <command_interface name="velocity">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
 
-    <joint name="back_left_wheel_joint">
-        <command_interface name="velocity">
-            <param name="min"># TODO</param>
-            <param name="max"># TODO</param>
-        </command_interface>
-        <state_interface name="position"/>
-        <state_interface name="velocity"/>
-        <state_interface name="effort"/>
-    </joint>
+        <!--
+        NOTE:
+        Apply the same velocity limits to all remaining drive wheels
+        so every wheel shares the same maximum speed.
+        -->
 
-</ros2_control>
+        <joint name="front_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
+        <joint name="mid_right_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
+        <joint name="mid_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
+        <joint name="back_right_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
+        <joint name="back_left_wheel_joint">
+            <command_interface name="velocity">
+                <param name="min"># TODO</param>
+                <param name="max"># TODO</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
+    </ros2_control>
+    
+    <!-- The base link -->
+    <link name="base_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0" />
+            <geometry>
+                <box size="0.01 0.01 0.01"/>
+            </geometry>
+            <material name="orange" />
+        </visual>
+    </link>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- body -->
+    <xacro:body parent="base_link" />
+    <xacro:differential parent="base_link" />
+
+    <!-- <xacro:turnbuckle lat_label="left" reflect="1"/>
+    <xacro:turnbuckle lat_label="right" reflect="-1"/> -->
+
+    <xacro:rocker parent="base_link" lat_label="left" reflect="1"/>
+    <xacro:rocker parent="base_link" lat_label="right" reflect="-1"/>
+
+    <xacro:bogie lat_label="left" reflect="1"/>
+    <xacro:bogie lat_label="right" reflect="-1"/>
+
+    <!-- sensors -->
+    <xacro:sensor_hokuyo prefix="laser" parent="base_link" min_angle="-1.0" max_angle="1.0">
+        <origin xyz="0.17 0 0.005" rpy="0 0 0"/>
+    </xacro:sensor_hokuyo>
+
+    <xacro:sensor_imu prefix="imu" parent="base_link">
+        <!-- <origin xyz="-0.32 0 0.05" rpy="0 0.5 0"/> -->
+        <origin xyz="0 0 -0.04" rpy="0 0 0"/>
+    </xacro:sensor_imu>
+
+    <xacro:sensor_asus_xtion prefix="camera" parent="base_link">
+        <origin xyz="0.215 0 0.065" rpy="0 0.15 0"/>
+        <!-- <origin xyz="0.212 0 0.065" rpy="0 0 0"/> -->
+    </xacro:sensor_asus_xtion>
+
+    <!-- wheels -->
+    <xacro:corner_link lon_label="front" lat_label="left" reflect="1"/>
+    <xacro:corner_link lon_label="front" lat_label="right" reflect="-1"/>
+    <xacro:front_corner_joint lat_label="left" reflect="1"/>
+    <xacro:front_corner_joint lat_label="right" reflect="-1"/>
+
+    <xacro:corner_link lon_label="back" lat_label="left" reflect="1"/>
+    <xacro:corner_link lon_label="back" lat_label="right" reflect="-1"/>
+    <xacro:back_corner_joint lat_label="left" reflect="1"/>
+    <xacro:back_corner_joint lat_label="right" reflect="-1"/>
+
+    <xacro:wheel_link lon_label="front" lat_label="left" reflect="1"/>
+    <xacro:wheel_link lon_label="front" lat_label="right" reflect="-1"/>
+    <xacro:corner_wheel_joint lon_label="front" lat_label="left" reflect="1"/>
+    <xacro:corner_wheel_joint lon_label="front" lat_label="right" reflect="-1"/>
+
+    <xacro:wheel_link lon_label="mid" lat_label="left" reflect="1"/>
+    <xacro:wheel_link lon_label="mid" lat_label="right" reflect="-1"/>
+    <xacro:mid_wheel_joint lat_label="left" reflect="1"/>
+    <xacro:mid_wheel_joint lat_label="right" reflect="-1"/>
+
+    <xacro:wheel_link lon_label="back" lat_label="left" reflect="1"/>
+    <xacro:wheel_link lon_label="back" lat_label="right" reflect="-1"/>
+    <xacro:corner_wheel_joint lon_label="back" lat_label="left" reflect="1"/>
+    <xacro:corner_wheel_joint lon_label="back" lat_label="right" reflect="-1"/>
+
+</robot>
